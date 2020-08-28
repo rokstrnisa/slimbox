@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FilenameFactoryTest {
   private static final Email email = new Email("id3", "uid42", Arrays.asList("SENT", "IMPORTANT"),
-      "\"Rok Strniša\" <rok.strnisa@gmail.com>", "subject", 1501545600000L, 32141);
+      "\"Rok Strniša\" <rok.strnisa@gmail.com>", "subject", 1501574400000L, 32141);
 
   @Test
   public void testFromEmail() {
@@ -31,7 +31,7 @@ public class FilenameFactoryTest {
 
   @Test
   public void testTimestamp() {
-    testGetFilename("${TIMESTAMP}", "a%b@.jpg", "1501545600000");
+    testGetFilename("${TIMESTAMP}", "a%b@.jpg", "1501574400000");
     testGetFilename("${TIMESTAMP:3}", "a%b@.jpg", "150");
   }
 
