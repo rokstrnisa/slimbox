@@ -94,7 +94,7 @@ class EmailProcessor {
   }
 
   private boolean isDownloadableBodyPart(BodyPart bodyPart) throws MessagingException {
-    return bodyPart.getDisposition() != null;
+    return (bodyPart.getDisposition() != null && !"inline".equals(bodyPart.getDisposition()));
   }
 
   private void copyBodyPartToDisk(BodyPart bodyPart) throws IOException, MessagingException {
